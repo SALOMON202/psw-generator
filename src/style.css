@@ -1,0 +1,29 @@
+#create-password-form {
+  display: flex;
+  flex-direction: column;
+}
+#howManyChars {
+  width: 100px;
+  border-radius: 3px;
+  margin: auto;
+  text-align: center;
+}
+.single-check {
+  display: flex;
+  align-items: center;
+}
+.checkbox-cont {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+  margin: 8px 0;
+}
+span {
+  border: 1px solid red;
+  border-radius: 3px;
+  min-width: 100px;
+  text-align: center;
+  display: block;
+  height: 20px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electron</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+
+    <link href="./style.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>GENERATORE DI PASSWORD</h1>
+    <main class="container">
+      <form action="" id="create-password-form">
+        <input
+          type="number"
+          name="howManyChars"
+          id="howManyChars"
+          placeholder="Type a num"
+          min="8"
+        />
+        <div class="checkbox-cont">
+          <div class="single-check">
+            <input
+              type="checkbox"
+              class="checkbox"
+              name="specialChars"
+              id="specialChars"
+              placeholder="Do you want special characters to be included?"
+            /><label for="specialChars">Do you want special characters to be included?</label>
+          </div>
+          <div class="single-check">
+            <input
+              type="checkbox"
+              class="checkbox"
+              name="nums"
+              id="nums"
+              placeholder="Do you want numbers to be included?"
+            /><label for="nums">Do you want numbers to be included?</label>
+          </div>
+          <div class="single-check">
+            <input
+              type="checkbox"
+              class="checkbox"
+              name="uppercase"
+              id="uppercase"
+              placeholder="1 Uppercase letter 1 Lowercase letter?"
+            /><label for="uppercase">1 Uppercase letter 1 Lowercase letter?</label>
+          </div>
+        </div>
+        <button id="create-password">CREATE</button>
+      </form>
+      <p>Your new password is: <span id="generated-password"></span></p>
+      <p id="info"></p>
+    </main>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
